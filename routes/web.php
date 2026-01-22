@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController; //Importar
 use Illuminate\Support\Facades\Route;
 
+/*
 Route::get('/', [HomeController::class,'index']);
 
 //Ruta para motrar el listado de registros
@@ -32,3 +33,11 @@ Route::put('posts{post}', [PostController::class,'update'])
 //Ruta para eliminar un registro
 Route::put('posts{post}', [PostController::class,'destroy'])
     ->name('posts.destroy');
+*/
+
+//Cambio de URI
+Route::resource('articulos',PostController::class)
+    ->parameters(['articulos'=>'post'])
+    ->names('posts');
+    //->only(['index']);
+
