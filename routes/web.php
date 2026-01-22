@@ -5,7 +5,7 @@ use App\Http\Controllers\PostController; //Importar
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', HomeController::class);
 
 /*
 Route::prefix('posts')->name('posts.')->controller(PostController::class)->group(function(){

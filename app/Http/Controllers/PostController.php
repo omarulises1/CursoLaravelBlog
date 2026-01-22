@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return "Hola desde la página de posts desde controller.php";
+        return view('posts.index');
     }
 
     public function create(){
-        return "Aqui se mostrará el formulario para crear un post";
+        return view('posts.create');;
     }
 
     public function store(){
@@ -19,7 +19,11 @@ class PostController extends Controller
     }
 
     public function show($post){
-        return "Aquí se mostrará el post: $post";
+        //return view('posts.show',['post' => $post]);  //Mandar valor desde laravel
+
+        $prueba="hola mundo desde php";
+
+        return view('posts.show',compact('post','prueba'));
     }
 
     public function edit($post){

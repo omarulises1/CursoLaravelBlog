@@ -23,8 +23,11 @@ class AppServiceProvider extends ServiceProvider
         Route::pattern('id','[0-9]+');
 
         Route::resourceVerbs([
-            'create'=>'crear',
+           // 'create'=>'crear',
             'edit'=>'editar'
         ]);
+        
+        
+        
     }
 }
