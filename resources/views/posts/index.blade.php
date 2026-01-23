@@ -10,6 +10,30 @@
     <h1>Aquí se mostrará el listado de posts</h1>
 
     <h1><?php echo $test?></h1>
-    <h1><?php echo $prueba2?></h1>
+   <!-- {//!!$etiqueta!!} -->
+
+    {{$prueba}}
+    <br>
+
+<!-- Javascript-->
+    <script>
+        let posts = @json($posts)
+
+        console.log(posts); 
+
+    </script>
+
+<!-- PHP -->
+    @if(false)
+        <p>La condicional es true</p>
+    @else
+        <p>La condicional es false</p>
+    @endif
+
+    @unless (false)
+        <p>Valor falso a la directiva unless</p>
+    @endunless
+
+
 </body>
 </html>

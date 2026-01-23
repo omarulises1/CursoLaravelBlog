@@ -2,12 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     public function index(){
-        return view('posts.index');
+
+        $posts = [
+            [
+                'title' => 'Post 1',
+                'content' => 'Contenido del post 1' 
+            ],
+            [
+                'title' => 'Post 2',
+                'content' => 'Contenido del post 2' 
+            ],
+            [
+                'title' => 'Post 3',
+                'content' => 'Contenido del post 3' 
+            ]
+        ];
+
+
+        $etiqueta = "<h1>Este es un parrafo.</h1>";
+
+        return view('posts.index', compact('posts'));  //Comando para mandar a la vista
     }
 
     public function create(){
