@@ -22,10 +22,12 @@ class PostController extends Controller
             ]
         ];
 
-
         $etiqueta = "<h1>Este es un parrafo.</h1>";
+        $dia=5;
+        $lista=[];
+        $count=10;
 
-        return view('posts.index', compact('posts'));  //Comando para mandar a la vista
+        return view('posts.index', compact('posts','dia','lista','count'));  //Comando para mandar a la vista
     }
 
     public function create(){
